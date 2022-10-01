@@ -1,6 +1,6 @@
-package lotation
+package rotation
 
-func Lotation_right(arr []int, s, t int) {
+func Rotation_right(arr []int, s, t int) {
 	temp := arr[s]
 	for i := s; i < t; i++ {
 		temp2 := arr[i+1]
@@ -10,7 +10,7 @@ func Lotation_right(arr []int, s, t int) {
 	arr[s] = temp
 }
 
-func Lotation_left(arr []int, s, t int) {
+func Rotation_left(arr []int, s, t int) {
 	temp := arr[s]
 	for i := s; i > t; i-- {
 		temp2 := arr[i-1]
@@ -20,7 +20,7 @@ func Lotation_left(arr []int, s, t int) {
 	arr[s] = temp
 }
 
-func Lotation_k(arr []int, s, t, k int) {
+func Rotation_k(arr []int, s, t, k int) {
 
 	temp := arr[t-(k-1) : t+1]
 	copySlice := make([]int, (t-s+1)-k)
